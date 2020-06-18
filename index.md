@@ -127,7 +127,7 @@ This block displays the address to a non-eventbrite signup page.
 {% if page.signupurl %}
 <p id="signup">
   <strong>Register:</strong>
-  {{page.signupurl}}.
+  <a href="{{page.signupurl}}">Registration page</a>.
 </p>
 {% endif %}
 
