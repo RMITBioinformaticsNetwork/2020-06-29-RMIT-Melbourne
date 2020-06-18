@@ -1,20 +1,21 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 venue: "RMIT Melbourne"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "Melbourne Australia"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+address: "Online via Microsoft Teams"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "au"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 latitude: "45"     # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "-1"    # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "June 29 and 30 2020"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "9:00am - 5:00pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+humandate: "June 29th - July 1st, 2020"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:00am - 3:00pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2020-06-29      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2020-06-29       # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+enddate: 2020-07-01       # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Paul Harrison", "Will Pitchers", "Nick Wong"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Paul Harrison", "Will Pitchers", "Nick Wong"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["nick.wong@monash.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+signupurl: "https://rmit.onestopsecure.com/onestopweb/DataCarpentries" # signup url for non-eventbrite page
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -115,10 +116,18 @@ address.
 <p id="where">
   <strong>Where:</strong>
   {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
+</p>
+{% endif %}
+
+{% comment %}
+SIGN UP page
+
+This block displays the address to a non-eventbrite signup page.
+{% endcomment %}
+{% if page.signupurl %}
+<p id="signup">
+  <strong>Register:</strong>
+  {{page.signupurl}}.
 </p>
 {% endif %}
 
@@ -142,7 +151,7 @@ Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>). Participants will also need to have Microsoft Teams installed as this workshop is being held online (a link to the MS Teams channel/team will be sent out  to registered participants prior to the workshop).
 </p>
 
 {% comment%}
